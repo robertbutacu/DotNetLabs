@@ -1659,26 +1659,6 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
-      },
-      "ClassLibrary1/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "compile": {
-          "bin/placeholder/ClassLibrary1.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClassLibrary1.dll": {}
-        }
-      },
-      "lab2_1/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "compile": {
-          "bin/placeholder/lab2_1.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/lab2_1.dll": {}
-        }
       }
     }
   },
@@ -5624,24 +5604,12 @@
         "xunit.runner.visualstudio.2.2.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "ClassLibrary1/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary1/ClassLibrary1.csproj",
-      "msbuildProject": "../ClassLibrary1/ClassLibrary1.csproj"
-    },
-    "lab2_1/1.0.0": {
-      "type": "project",
-      "path": "../lab2_1/lab2_1.csproj",
-      "msbuildProject": "../lab2_1/lab2_1.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "ClassLibrary1 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170628-02",
       "Microsoft.NETCore.App >= 2.0.0",
-      "lab2_1 >= 1.0.0",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
     ]
@@ -5656,11 +5624,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\Projects\\DotNetLabs\\lab2_1\\XUnitTestProject1\\XUnitTestProject1.csproj",
-      "projectName": "XUnitTestProject1",
-      "projectPath": "E:\\Projects\\DotNetLabs\\lab2_1\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "projectUniqueName": "E:\\Projects\\DotNetLabs\\lab3\\lab3_test\\lab3_test.csproj",
+      "projectName": "lab3_test",
+      "projectPath": "E:\\Projects\\DotNetLabs\\lab3\\lab3_test\\lab3_test.csproj",
       "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\DotNetLabs\\lab2_1\\XUnitTestProject1\\obj\\",
+      "outputPath": "E:\\Projects\\DotNetLabs\\lab3\\lab3_test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5678,14 +5646,7 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {
-            "E:\\Projects\\DotNetLabs\\lab2_1\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "E:\\Projects\\DotNetLabs\\lab2_1\\ClassLibrary1\\ClassLibrary1.csproj"
-            },
-            "E:\\Projects\\DotNetLabs\\lab2_1\\lab2_1\\lab2_1.csproj": {
-              "projectPath": "E:\\Projects\\DotNetLabs\\lab2_1\\lab2_1\\lab2_1.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

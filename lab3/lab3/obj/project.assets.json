@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\Projects\\DotNetLabs\\lab2_1\\ClassLibrary1\\ClassLibrary1.csproj",
-      "projectName": "ClassLibrary1",
-      "projectPath": "E:\\Projects\\DotNetLabs\\lab2_1\\ClassLibrary1\\ClassLibrary1.csproj",
+      "projectUniqueName": "E:\\Projects\\DotNetLabs\\lab3\\lab3\\lab3.csproj",
+      "projectName": "lab3",
+      "projectPath": "E:\\Projects\\DotNetLabs\\lab3\\lab3\\lab3.csproj",
       "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\DotNetLabs\\lab2_1\\ClassLibrary1\\obj\\",
+      "outputPath": "E:\\Projects\\DotNetLabs\\lab3\\lab3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
