@@ -45,7 +45,5 @@ namespace lab3.Data._2
         {
             return jobsInfo.FindAll(e => e.Salary > limit);
         }
-
-
     }
 }
