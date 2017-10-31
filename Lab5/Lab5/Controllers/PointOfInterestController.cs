@@ -7,6 +7,7 @@ using Lab5.DATATRANSFEROBJECT;
 
 namespace Lab5.Controllers
 {
+    [Route("api/[controller]")]
     public class PointOfInterestController : Controller
     {
         private readonly IPointOfInterestRepository _repository;
