@@ -8,32 +8,32 @@ namespace Business.Business.StockModelRepo
 {
     public class StockModelRepository : IStockModel
     {
-        private readonly IDatabaseContext _databaseservice;
+        private readonly IDatabaseContext _databaseService;
 
         public void Add(StockModel stock)
         {
-            _databaseservice.StockModels.Add(stock);
+            _databaseService.StockModels.Add(stock);
         }
 
         public void Delete(Guid id)
         {
             var stock = GetById(id);
-            _databaseservice.StockModels.Remove(stock);
+            _databaseService.StockModels.Remove(stock);
         }
 
         public void Edit(StockModel stock)
         {
-            _databaseservice.StockModels.Update(stock);
+            _databaseService.StockModels.Update(stock);
         }
 
         public IReadOnlyList<StockModel> GetAll()
         {
-            return _databaseservice.StockModels.ToList();
+            return _databaseService.StockModels.ToList();
         }
 
         public StockModel GetById(Guid id)
         {
-            return _databaseservice.StockModels.FirstOrDefault(s => s.Id == id);
+            return _databaseService.StockModels.FirstOrDefault(s => s.Id == id);
         }
     }
 }
