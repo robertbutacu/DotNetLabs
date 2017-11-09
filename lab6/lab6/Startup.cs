@@ -13,7 +13,10 @@ namespace lab6
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server = .\SQLEXPRESS ; Database = StockModel.Development; Trusted_Connection = true;";
+            services.AddTransient<IDatabaseContext, DatabaseContext>(); 
+
+
+            var connection = @"Server = .\SQLEXPRESS; Database = StockModel.Development; Trusted_Connection = true;";
 
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
 
@@ -21,7 +24,7 @@ namespace lab6
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My PointOfInterest API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = " Lab 6 - Stocks", Version = "v1" });
             });
         }
 

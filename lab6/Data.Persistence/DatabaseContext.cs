@@ -10,7 +10,6 @@ namespace Data.Persistence
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options): base(options)
         {
-            Database.EnsureCreated();
         }
 
         public DbSet<StockModel> StockModels { get; set; }

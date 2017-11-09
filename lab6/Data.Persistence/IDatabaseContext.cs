@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Persistence
 {
-    internal interface IDatabaseContext
+    public interface IDatabaseContext
     {
         DbSet<StockModel> StockModels { get; set; }
         DbSet<StockRecord> StockRecords { get; set; }
