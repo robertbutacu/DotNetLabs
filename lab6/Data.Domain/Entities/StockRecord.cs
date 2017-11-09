@@ -20,21 +20,25 @@ namespace Data.Domain.Entities
         [Range(1, double.MaxValue)]
         public Double EndPrice { get; private set; }
 
-        public static StockRecord Create(DateTime date, Double startPrice, Double endPrice)
+        [StringLength(30)]
+        public String Owner { get; private set; }
+
+        public static StockRecord Create(DateTime date, Double startPrice, Double endPrice, String owner)
         {
             var instance = new StockRecord { Id = new Guid() };
 
-            instance.Update(date, startPrice, endPrice);
+            instance.Update(date, startPrice, endPrice, owner);
 
             return instance;
 
         }
 
-        public void Update(DateTime date, Double startPrice, Double endPrice)
+        public void Update(DateTime date, Double startPrice, Double endPrice, String owner)
         {
             Date = date;
             StartPrice = startPrice;
             EndPrice = endPrice;
+            Owner = owner;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Presentation.Controllers
         [HttpPost]
         public void Post([FromBody]CreateStockRecord s)
         {
-            var entity = StockRecord.Create(s.Date, s.StartPrice, s.EndPrice);
+            var entity = StockRecord.Create(s.Date, s.StartPrice, s.EndPrice, s.Owner);
             _repository.Add(entity);
         }
 
@@ -40,7 +40,7 @@ namespace Presentation.Controllers
         public void Put(Guid id, [FromBody]UpdateStockRecord s)
         {
             var entity = _repository.GetById(id);
-            entity.Update(s.Date, s.StartPrice, s.EndPrice);
+            entity.Update(s.Date, s.StartPrice, s.EndPrice, s.Owner);
             // magic
             _repository.Edit(entity);
         }

@@ -12,5 +12,7 @@ namespace Presentation.DTO
         public Double StartPrice { get; set; }
 
         public Double EndPrice { get; set; }
+
+        public String Owner { get; set; }
     }
 }
