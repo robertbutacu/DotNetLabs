@@ -1,7 +1,6 @@
 ﻿using Data.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Business.StockRecordRepo
 {
@@ -9,8 +8,8 @@ namespace Business.Business.StockRecordRepo
     {
         IReadOnlyList<StockRecord> GetAll();
         StockRecord GetById(Guid id);
-        void Add(StockRecord todo);
-        void Edit(StockRecord todo);
+        void Add(StockRecord stock);
+        void Edit(StockRecord stock);
         void Delete(Guid id);
     }
 }
