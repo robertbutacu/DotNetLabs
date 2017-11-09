@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Data.Domain.Entities
 {
@@ -13,15 +14,14 @@ namespace Data.Domain.Entities
 
         public DateTime Date { get; private set; }
 
+        [Range(1, double.MaxValue)]
         public Double StartPrice { get; private set; }
 
+        [Range(1, double.MaxValue)]
         public Double EndPrice { get; private set; }
 
         public static StockRecord Create(Double startPrice, Double endPrice)
         {
-            if (startPrice < 0 || endPrice < 0)
-                throw new ArgumentException("Illegal input");
-
             var instance = new StockRecord { Id = new Guid() };
 
             instance.Update(startPrice, endPrice);
@@ -32,9 +32,6 @@ namespace Data.Domain.Entities
 
         public void Update(Double startPrice, Double endPrice)
         {
-            if (startPrice < 0 || endPrice < 0)
-                throw new ArgumentException("Illegal input");
-
             StartPrice = startPrice;
             EndPrice = endPrice;
         }
