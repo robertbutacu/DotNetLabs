@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Data.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Persistence
@@ -11,5 +12,8 @@ namespace Data.Persistence
         {
             Database.EnsureCreated();
         }
+
+        public DbSet<StockModel> StockModels { get; set; }
+        public DbSet<StockRecord> StockRecords { get; set; }
     }
 }

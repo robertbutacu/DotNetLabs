@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data.Domain.Entities
 {
-    class StockModel
+    public class StockModel
     {
 
         private StockModel()
