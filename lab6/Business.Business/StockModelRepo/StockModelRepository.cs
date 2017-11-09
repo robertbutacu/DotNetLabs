@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Business.Business.StockModelRepo
 {
-    class StockModelRepository : IStockModel
+    public class StockModelRepository : IStockModel
     {
         private readonly IDatabaseContext _databaseservice;
 
@@ -33,7 +33,7 @@ namespace Business.Business.StockModelRepo
 
         public StockModel GetById(Guid id)
         {
-            return _databaseservice.StockModels.FirstOrDefault(s => s.Id = id);
+            return _databaseservice.StockModels.FirstOrDefault(s => s.Id == id);
         }
     }
 }

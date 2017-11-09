@@ -1,4 +1,6 @@
-﻿using Data.Persistence;
+﻿using Business.Business.StockModelRepo;
+using Business.Business.StockRecordRepo;
+using Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -13,8 +15,9 @@ namespace lab6
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IDatabaseContext, DatabaseContext>(); 
-
+            services.AddTransient<IDatabaseContext, DatabaseContext>();
+            services.AddTransient<IStockRecord, StockRecordRepository>();
+            services.AddTransient<IStockModel, StockModelRepository>();
 
             var connection = @"Server = .\SQLEXPRESS; Database = StockModel.Development; Trusted_Connection = true;";
 
