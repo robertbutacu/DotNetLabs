@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Persistence
+namespace Business.Business
 {
     public class Class1
     {
