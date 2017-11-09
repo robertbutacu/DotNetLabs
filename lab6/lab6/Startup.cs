@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Data.Persistence;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -11,6 +13,10 @@ namespace lab6
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = @"Server = .\SQLEXPRESS ; Database = StockModel.Development; Trusted_Connection = true;";
+
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+
             services.AddMvc();
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
