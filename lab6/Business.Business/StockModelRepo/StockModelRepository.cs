@@ -1,37 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Data.Domain.Entities;
+using Data.Persistence;
+using System.Linq;
 
 namespace Business.Business.StockModelRepo
 {
     class StockModelRepository : IStockModel
     {
-
+        private readonly IDatabaseContext _databaseservice;
 
         public void Add(StockModel stock)
         {
-            throw new NotImplementedException();
+            _databaseservice.StockModels.Add(stock);
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            var stock = GetById(id);
+            _databaseservice.StockModels.Remove(stock);
         }
 
         public void Edit(StockModel stock)
         {
-            throw new NotImplementedException();
+            _databaseservice.StockModels.Update(stock);
         }
 
         public IReadOnlyList<StockModel> GetAll()
         {
-            throw new NotImplementedException();
+            return _databaseservice.StockModels.ToList();
         }
 
         public StockModel GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return _databaseservice.StockModels.FirstOrDefault(s => s.Id = id);
         }
     }
 }
