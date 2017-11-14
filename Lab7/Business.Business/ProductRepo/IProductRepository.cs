@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Business.Business
+namespace Business.Business.ProductRepo
 {
     public interface IProductRepository
     {

@@ -3,12 +3,9 @@ using Domain;
 
 namespace Persistence
 {
-    public class DatabaseContext: DbContext, IDatabaseService
+    public partial class DatabaseContext: DbContext, IDatabaseService
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
-        {
-        }
-
-        public DbSet<ProductData> Products { get ; set; }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
+        public DbSet<ProductData> ProductDatas { get; set; }
     }
 }

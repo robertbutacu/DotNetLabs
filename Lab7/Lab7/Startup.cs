@@ -4,8 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-using Business.Business;
-using Business.Business.Product;
+using Business.Business.ProductRepo;
 
 namespace Lab7
 {
