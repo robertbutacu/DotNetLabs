@@ -5,6 +5,6 @@ namespace Persistence
 {
     public interface IDatabaseService
     {
-        DbSet<ProductData> ProductDatas { get; set; }
+        DbSet<Domain.ProductData> ProductDatas { get; set; }
     }
 }

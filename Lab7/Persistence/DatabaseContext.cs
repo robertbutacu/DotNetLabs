@@ -6,6 +6,6 @@ namespace Persistence
     public partial class DatabaseContext: DbContext, IDatabaseService
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
-        public DbSet<ProductData> ProductDatas { get; set; }
+        public DbSet<Domain.ProductData> ProductDatas { get; set; }
     }
 }
